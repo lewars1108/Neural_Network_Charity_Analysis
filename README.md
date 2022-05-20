@@ -8,19 +8,20 @@ Using neural networks, we will design and train models using the Python TensorFl
  
 ### Data Preprocessing
 
-            What variable(s) are considered the target(s) for your model? The variabe that I considered the target was "Is-Successful". Ultimately this is what we want to know about the funds being used.
+- What variable(s) are considered the target(s) for your model? The variabe that I considered the target was "Is-Successful". Ultimately this is what we want to know about the funds being used.
          
-            What variable(s) are considered to be the features for your model? name, application, type, affiliation, classification, use_case, organization, income_amt, special_considerations, status, and ask_am
+- What variable(s) are considered to be the features for your model? name, application, type, affiliation, classification, use_case, organization, income_amt, special_considerations, status, and ask_am
             
-            What variable(s) are neither targets nor features, and should be removed from the input data? EIN because it is ultimately a duplicate column of information another identifier for the name of the organization. Since special_consideration cannot be catagorized, it is neither a target nor a feature.
+- What variable(s) are neither targets nor features, and should be removed from the input data? EIN because it is ultimately a duplicate column of information another identifier for the name of the organization. Since special_consideration cannot be catagorized, it is neither a target nor a feature.
             
 ### Compiling, Training, and Evaluating the Model
 
-            How many neurons, layers, and activation functions did you select for your neural network model, and why?
-            Were you able to achieve the target model performance?
-            What steps did you take to try and increase model performance?
+- How many neurons, layers, and activation functions did you select for your neural network model, and why? Three layers were used each with multiple neurons. Relu and sigmoid were the activation functions used, and with sigmoid yeilding better accuracy.  
+
+- Were you able to achieve the target model performance? Yes
+
+- What steps did you take to try and increase model performance? Using the sigmoid activation function for the second and third layer increased the accuracy, as well as changing the NAME column into data points.
 
 ## Summary
-Overall, by increasing the accuracy above 75% we are able to correctly classify each of the points in the test data 75% of the time. And, an applicant has a 80% chance of being successful if they have the following:
--- The NAME of the applicant appears more than 5 times (they have applied more than 5 times)The type of APPLICATION is one of the following; T3, T4, T5, T6, T7, T8, T10, and T19The application has the following CLASSIFICATION; C1000, C2000, C3000, C1200, and C2100.
-A good model to recommend is the Random Forest model because Random Forest are good for classification problems. Using this model produces a 78% accuracy. 
+
+We were able to get the accuracy to 78% by adding more neurons and layers and using the sigmoid function. 
